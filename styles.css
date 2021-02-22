@@ -1,0 +1,194 @@
+/* ********** Custom Properties ********** */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --principal-color: #0062be; /* azul*/
+  --secundary-color: rgb(230, 12, 44); /*rojo*/
+  --gradient-color: radial-gradient(#525252, #131313); /*degradado*/
+  --gradient-color-two: radial-gradient(#017bff, #0062be); /*degradado*/
+  --first-color: #d90062;
+  --first-alpha-color: rgba(217, 0, 98, 0.75);
+  --second-color: #14192d;
+  --second-alpha-color: rgba(20, 25, 45, 0.75);
+  --third-color: #501464;
+  --third-alpha-color: rgba(80, 20, 100, 0.75);
+  --white-color: #fff;
+  --gray-light-color: #f3f3f3;
+  --gray-color: #ccc;
+  --gray-dark-color: #666;
+  --black-color: #000;
+  --link-color: #509ee3;
+  --title-color: #333;
+  --text-color: #222;
+  --white-alpha-color: rgba(255, 255, 255, 0.5);
+  --black-alpha-color: rgba(0, 0, 0, 0.5);
+  --font: "Raleway", sans-serif;
+  --max-width: 1200px;
+  --max-width-desktop: 1100px;
+  --header-height: 4rem;
+}
+/* ********** Reset ********** */
+html{
+
+}
+body{
+margin: 0;
+}
+
+p {
+    display: block;
+    line-height: 1.6;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+/* ********** Utilities ********** */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width-desktop);
+
+}
+/* ********** Site Style ********** */
+
+.service-card {
+  margin: 1rem auto;
+  padding: 1.8rem;
+  text-align: center;
+  background: var(--gradient-color-two);
+  border-radius: 18px;
+}
+.service-card svg {
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  fill:var(--white-color);
+
+}
+.service-card img {
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  fill:var(--white-color);
+  width:15rem;
+}
+.section {
+  padding: 1rem 1rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+/*.bg-gray-light{
+  background: var(--gray-light-color);
+}*/
+.section-title{
+  border-top: thin solid var(--first-color);
+  border-bottom: thin solid var(--first-color);
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  width: 300px;
+  text-align: center;
+  color: var(--title-color);
+}
+.section-subtitle{
+  border-radius: 1.2rem;
+  padding: 0.4rem;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background:var(--white-color);
+  width: 250px;
+  margin: auto;
+   
+}
+.text-card{
+  color: var(--white-color);
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+.purchase button{
+  width: 100%;
+  padding: 0.2rem 0rem;
+  background: #f54642;
+  border:none;
+  cursor: pointer;
+  border-radius: 30px;
+  margin-top: 2rem;
+  box-shadow: 0px 5px 10px rgba(255,255,255,0.5);
+}
+.sizes {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.1rem 0rem;
+}
+.sizes button{
+   padding: 0.5rem 2.5rem;
+   background: none;
+   border: none;
+   box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+   border-radius: 30px;
+   font-size: 1.1rem;
+   font-weight: 400;
+   color: var(--white-color)
+}
+@media screen and (min-width: 768px) {
+  .home > .container {
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+    justify-content: space-between;
+    align-content: center;
+   }
+  .home .section-title{
+    grid-column: span 2;
+    }
+  .service-card {
+    background: var(--secundary-color);
+    }
+   .purchase button{
+    background: var(--principal-color);
+  } 
+}
+
+@media screen and (min-width: 1024px) {
+  .home > .container {
+    grid-template-columns: repeat(1,100%);
+    
+   }
+  .home .section-title{
+    grid-column: span 3;
+   }
+  .service-card {
+    background: var(--gradient-color-two);
+   }
+   .purchase button{
+    background: #f54642;
+  } 
+  .section-subtitle{
+   color: #000;
+   font-size: 1.7rem;
+   font-weight: 600;
+   background:var(--white-color);
+    width: 300px;
+
+  }
+  .text-card{
+    color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+  .service-card img {
+    width:20rem;
+  }
+  .sizes button{
+   font-size: 1.5rem;
+   font-weight: 600;
+   color: var(--white-color)
+}
+}
